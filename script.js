@@ -2,15 +2,22 @@ const container = document.querySelector(".container");
 const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
-const error404 = document.querySelector(".not-found")
+const error404 = document.querySelector(".not-found");
+const free = document.querySelector(".free");
 
 search.addEventListener('click', () => {
 
     const APIkey = "56da6a48fb88791dbb225dd420aff7b3";
     const city = document.querySelector('.search-box input').value;
 
-    if (city === '')
+    if (city === ''){
+        free.classList.remove('passive');
+        weatherBox.classList.remove('active');
+        weatherDetails.classList.remove('active');
+        error404.classList.remove('active');
         return;
+    }
+        
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&&units=metric&appid=${APIkey}`)
     .then( response => response.json())
     .then(json => { 
@@ -21,6 +28,7 @@ search.addEventListener('click', () => {
             weatherBox.classList.remove('active');
             weatherDetails.classList.remove('active');
             error404.classList.add('active');
+            free.classList.add('passive');
             return;
         }
 
@@ -29,6 +37,7 @@ search.addEventListener('click', () => {
         weatherBox.classList.add('active');
         weatherDetails.classList.add('active');
         error404.classList.remove('active');
+        free.classList.add('passive');
 
         //The &units=metric gives temp in celsius
         const image = document.querySelector('.weather-box img');
