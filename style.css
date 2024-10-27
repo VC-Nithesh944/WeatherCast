@@ -20,10 +20,11 @@ body{
 .container{
     position: relative;          /*This decides the elements inside position*/
     width: 400px;
-    height: 555px;
+    height: 400px;
     background: rgba(254, 254, 254, 0.2);
     padding: 20px;
     border-radius: 16px;
+    transition: height 0.3s ease;
     color:white;           /*Text color inside the container*/
 }
 
@@ -81,7 +82,17 @@ body{
 }
 
 
+.weather-box,
+.weather-details,
+.not-found{
+    visibility:hidden;
+}
 
+.weather-box.active,
+.weather-details.active,
+.not-found.active{
+    visibility:visible;
+}
 
 /*Editing the images*/
 .weather-box{
@@ -165,5 +176,23 @@ body{
 
 
 
+.not-found{
+    position : absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    text-align: center;
+    margin-top : 120px;
+}
+
+.not-found .box img{
+    width: 65%;
+}
+
+.not-found .box p{
+    font-size: 28px;
+    margin-top: 25px;
+    font-weight: 600;
+}
 
 
