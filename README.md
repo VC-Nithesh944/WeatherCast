@@ -47,15 +47,15 @@ To set up the project locally, follow these steps:
   1. **Fork the Repository.🍴**
   2. **Create a New Branch and Switch to It:**
       ```bash
-          git checkout -b Feature/YourFeature
+      git checkout -b Feature/YourFeature
       ```
   3. **Make your changes and Commit them:**
       ```bash
-          git commit -m add "New Feature"
+      git commit -m add "New Feature"
       ```
   4. **Push to the Branch:**
       ```bash
-          git push origin Feature/YourFeature
+      git push origin Feature/YourFeature
       ```
   5. **Create a Pull Request. 🔄**
 
