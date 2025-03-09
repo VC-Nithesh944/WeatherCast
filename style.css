@@ -12,7 +12,7 @@ body{
     justify-content: center;    /*can be used only with display:flex*/
     align-items: center;
     min-height: 100vh;          /*keeps the items at center based on devices*/
-    background: url("/Images/background.jpg");
+    background: url("/background.png");
     background-size:cover;
     background-position: center;
 }
