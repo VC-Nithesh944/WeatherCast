@@ -12,19 +12,11 @@ body{
     justify-content: center;    /*can be used only with display:flex*/
     align-items: center;
     min-height: 100vh;          /*keeps the items at center based on devices*/
-    background: url("/Images/Background.jpg");
+    background: url("/Images/background.jpg");
     background-size:cover;
     background-position: center;
 }
 
-.background{
-    animation: moveBackground 20s linear infinite;
-}
-
-@keyframes moveBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-}
 
 .container{
     position: relative;          /*This decides the elements inside position*/
